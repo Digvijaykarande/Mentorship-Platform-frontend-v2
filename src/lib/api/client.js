@@ -9,7 +9,10 @@
  *   `apiRequest` returns { data, meta } when pagination/meta is needed.
  */
 
-export const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api").replace(/\/$/, "");
+// export const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api").replace(/\/$/, "");
+
+
+export const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "https://mentorship-platform-backend-v2.onrender.com/api").replace(/\/$/, "");  
 
 export class ApiError extends Error {
   constructor(message, status = 500, { code, details } = {}) {
